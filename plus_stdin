@@ -1,1 +1,12 @@
 main
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2022 Kimura Yuki
+
+import sys
+
+ans = 0
+for line in sys.stdin:
+ try:
+	ans += int (line)
+
+
