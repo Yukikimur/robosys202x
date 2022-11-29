@@ -5,6 +5,7 @@
 
 import sys
 import math
+import numpy
 
 x_1=0
 x_2=0
@@ -31,13 +32,13 @@ elif sign1 == 'tan':
 	x_1 = math.tan(math.radians(x_1))
 elif sign1 == 'asin':
 	x_1 = float(input('enter radians:'))
-	x_1 = math.asin(math.pi / x_1)
+	x_1 = math.degrees(math.asin(numpy.clip(x_1,-1.0,1.0)))
 elif sign1 == 'acos':
 	x_1 = float(input('enter radians:'))
-	x_1 = math.acos(math.pi / x_1)
+	x_1 = math.degrees(math.acos(numpy.clip(x_1,-1.0,1.0)))
 elif sign1 == 'atan':
 	x_1 = float(input('enter radians:'))
-	x_1 = math.atan(math.pi / x_1)
+	x_1 = math.degrees(math.atan(numpy.clip(x_1,-1.0,1.0)))
 else:
 	x_1 = int(input('enter number:'))
 
@@ -64,13 +65,13 @@ elif sign3 == 'tan':
 	x_2 = math.tan(math.radians(x_2))
 elif sign3 == 'asin':
 	x_2 = float(input('enter radians:'))
-	x_2 = math.asin(math.pi / x_2)
+	x_2 = math.degrees(math.asin(numpy.clip(x_2,-1.0,1.0)))
 elif sign3 == 'acos':
 	x_2 = float(input('enter radians:'))
-	x_2 = math.acos(math.pi / x_2)
+	x_2 = math.degrees(math.acos(numpy.clip(x_2,-1.0,1.0)))
 elif sign3 == 'atan':
 	x_2 = float(input('enter radians:'))
-	x_2 = math.atan(math.pi / x_2)
+	x_2 = math.degrees(math.atan(numpy.clip(x_2,-1.0,1.0)))
 
 else :
 	x_2 = int(input('enter number:'))
