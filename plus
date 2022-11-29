@@ -1,13 +1,96 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2022 Kimura Yuki
+# SPDX-License-Identifier: GPL-3.0
+# SPDX-License-Identifier: BSD-3-Clause
 
 import sys
+import math
 
-ans = 0
+x_1=0
+x_2=0
 
-for line in sys.stdin:
-	try:
-		ans += int (line)
-	except:
-		ans += float(line)
-print(ans)
+sign1=input('√or-,π,sin,cos,tan,asin,acos,atan:')
+
+if sign1 == "√":
+	x_1 = int(input(''))
+	x_1 = math.sqrt(x_1)
+elif sign1 == '-':
+	x_1 = int(input(''))
+	x_1 = -x_1
+elif sign1 == 'π':
+	x_1 = int(input('*:'))
+	x_1 = math.pi*x_1
+elif sign1 == 'sin':
+	x_1 = int(input('enter degree:'))
+	x_1 = math.sin(math.radians(x_1))
+elif sign1 == 'cos':
+	x_1 = int(input('enter degree:'))
+	x_1 = math.cos(math.radians(x_1))
+elif sign1 == 'tan':
+	x_1 = int(input('enter degree:'))
+	x_1 = math.tan(math.radians(x_1))
+elif sign1 == 'asin':
+	x_1 = float(input('enter radians:'))
+	x_1 = math.asin(math.pi / x_1)
+elif sign1 == 'acos':
+	x_1 = float(input('enter radians:'))
+	x_1 = math.acos(math.pi / x_1)
+elif sign1 == 'atan':
+	x_1 = float(input('enter radians:'))
+	x_1 = math.atan(math.pi / x_1)
+else:
+	x_1 = int(input('enter number:'))
+
+sign2= input('+,-,*,/:')
+
+sign3=input('√or-,π,sin,cos,tan,asin,acos,atan:')
+if sign3 == "√":
+	x_2 = int(input(''))
+	x_2 = math.sqrt(x_2)
+elif sign3 == '-':
+	x_2 = int(input('')) 
+	x_2 = -x_2
+elif sign3 == 'π':
+	x_2 = int(input('*:'))
+	x_2 = math.pi*x_2
+elif sign3 == 'sin':
+	x_2 = int(input('enter degree:'))
+	x_2 = math.sin(math.radians(x_2))
+elif sign3 == 'cos':
+	x_2 = int(input('enter degree:'))
+	x_2 = math.cos(math.radians(x_2))
+elif sign3 == 'tan':
+	x_2 = int(input('enter degree:'))
+	x_2 = math.tan(math.radians(x_2))
+elif sign3 == 'asin':
+	x_2 = float(input('enter radians:'))
+	x_2 = math.asin(math.pi / x_2)
+elif sign3 == 'acos':
+	x_2 = float(input('enter radians:'))
+	x_2 = math.acos(math.pi / x_2)
+elif sign3 == 'atan':
+	x_2 = float(input('enter radians:'))
+	x_2 = math.atan(math.pi / x_2)
+
+else :
+	x_2 = int(input('enter number:'))
+
+if sign2 == '+':
+	print("{} + {}".format(x_1, x_2))
+	print(x_1+x_2)
+
+elif sign2 == '-':
+	print("{} - {}".format(x_1, x_2))
+	print(x_1-x_2)
+
+elif sign2 == '*':
+	print("{} x {}".format(x_1, x_2))
+	print(x_1*x_2)
+
+elif sign2 == '/':
+	print("{} / {}".format(x_1, x_2))
+	print(x_1/x_2)
+
+else:
+	print('it is unknown')
+
