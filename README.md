@@ -1,9 +1,13 @@
 # robosys202x
+
+[ "$res" = 0 ] && echo OK
+
 ロボットシステム学課題
 
 このソフトはpythonを用いて、簡単な計算を行うためのソフトである。
 
 使い方
+pythonをダウンロード、インストール
 
 手順
 １．初めに√や-,sin,cos,tan,asin,acos,atanの内から選択する。何もつけない場合はenterを押す。
@@ -17,4 +21,4 @@
 Linux ubuntu 18.04
 python 2.7.17
 
-
+©Yuki Kimura
